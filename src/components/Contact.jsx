@@ -14,10 +14,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-        'service_qg6zwcp',
-     'template_9cwd6yi',
+        import.meta.env.VITE_serviceId,
+     import.meta.env.VITE_template,
       form.current,
-       'buz0Y7vtPtp174olS'
+       import.meta.env.VITE_apiKey
        )
       .then((result) => {
           console.log(result.text);
